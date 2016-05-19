@@ -44,7 +44,9 @@
       "stage-2"
     ]
   },
-  "ghooks": {
-    "pre-commit": "npm run eslint"
+  "config": {
+    "ghooks": {
+      "pre-push": "npm run eslint"
+    }
   }
 }
