@@ -10,8 +10,6 @@ module.exports = {
       return randomHaiku();
     }
 
-    foo = 3;
-
     const randomHaikus = [];
     const max = count > haikus.length ? haikus.length : count;
 
