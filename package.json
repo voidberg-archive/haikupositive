@@ -3,6 +3,7 @@
   "description": "A simple module that returns random haikus.",
   "main": "src/index.js",
   "scripts": {
+    "commit": "git-cz",
     "prebuild": "rm -rf dist",
     "build": "babel --copy-files --out-dir dist src",
     "eslint": "eslint src",
@@ -37,6 +38,8 @@
     "babel-preset-stage-2": "^6.5.0",
     "babel-register": "^6.9.0",
     "chai": "^3.5.0",
+    "commitizen": "^2.8.1",
+    "cz-conventional-changelog": "^1.1.6",
     "eslint": "^2.10.2",
     "eslint-config-airbnb": "^9.0.1",
     "eslint-plugin-import": "^1.8.0",
@@ -53,6 +56,9 @@
     ]
   },
   "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    },
     "ghooks": {
       "pre-push": "npm run eslint && npm run cover && npm run check-cover"
     }
