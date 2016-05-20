@@ -17,18 +17,15 @@ module.exports = {
   random: function random(count) {
     if (count === undefined) {
       return randomHaiku();
-    } else {
-      var randomHaikus = [];
-
-      if (count > _haikus2.default.length) {
-        count = _haikus2.default.length;
-      }
-
-      for (var i = 0; i < count; i++) {
-        randomHaikus.push(randomHaiku());
-      }
-
-      return randomHaikus;
     }
+
+    var randomHaikus = [];
+    var max = count > _haikus2.default.length ? _haikus2.default.length : count;
+
+    for (var i = 0; i < max; i++) {
+      randomHaikus.push(randomHaiku());
+    }
+
+    return randomHaikus;
   }
 };

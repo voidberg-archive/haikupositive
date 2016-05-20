@@ -7,9 +7,17 @@ describe('haikupositive', () => {
     it('should return 38 haikus', () => {
       expect(lib.all.length).to.equal(38);
     });
+
+    it('should return an array of strings', () => {
+      expect(lib.all).to.satisfy((haikus) => {
+        return haikus.every((haiku) => {
+          return typeof haiku === 'string';
+        });
+      });
+    });
   });
 
-  describe('all', () => {
+  describe('random', () => {
     it('should return a haiku', () => {
       const haiku = lib.random();
 
@@ -20,6 +28,11 @@ describe('haikupositive', () => {
       const haikus = lib.random(2000);
 
       expect(haikus.length).to.equal(38);
+    });
+    it('should return the specified number of random haikus', () => {
+      const haikus = lib.random(10);
+
+      expect(haikus.length).to.equal(10);
     });
   });
 });
