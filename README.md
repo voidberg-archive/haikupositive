@@ -1,3 +1,5 @@
+[![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
+
 # haikupositive
 
 [![travis build](https://img.shields.io/travis/voidberg/haikupositive.svg?style=flat-square)](https://travis-ci.org/voidberg/haikupositive)
